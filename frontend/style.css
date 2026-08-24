@@ -1,0 +1,882 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-width: 320px;
+
+    background: #111315;
+
+    color: #f2f1ed;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+
+    --background: #111315;
+
+    --card: #1d2023;
+
+    --card-hover: #24282c;
+
+    --border: #34383c;
+
+    --text: #f2f1ed;
+
+    --muted: #9b9f9e;
+
+    --accent: #d8d0bd;
+
+    --max-width: 1120px;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+
+    height: 70px;
+
+    padding: 0 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--border);
+
+    background: rgba(17, 19, 21, 0.95);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.logo {
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+.navbar nav {
+
+    display: flex;
+
+    gap: 28px;
+}
+
+
+.navbar nav a {
+
+    color: #c8c9c7;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+
+.navbar nav a:hover {
+
+    color: white;
+}
+
+
+/* =========================================
+   COMMON
+========================================= */
+
+.eyebrow {
+
+    color: var(--accent);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 0 24px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.btn.primary {
+
+    background: var(--accent);
+
+    color: #151515;
+
+    border: 1px solid var(--accent);
+}
+
+
+.btn.primary:hover {
+
+    background: #eee8db;
+
+    transform: translateY(-2px);
+}
+
+
+.btn.secondary {
+
+    color: var(--text);
+
+    border: 1px solid var(--border);
+
+    background: transparent;
+}
+
+
+.btn.secondary:hover {
+
+    background: #202326;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   HOME
+========================================= */
+
+.hero {
+
+    width: min(var(--max-width), 90%);
+
+    min-height: calc(100vh - 70px);
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.hero-content {
+
+    max-width: 850px;
+}
+
+
+.hero h1 {
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(50px, 8vw, 95px);
+
+    line-height: 0.98;
+
+    letter-spacing: -4px;
+}
+
+
+.hero h1 span {
+
+    color: var(--accent);
+}
+
+
+.hero-description {
+
+    max-width: 620px;
+
+    margin-top: 30px;
+
+    color: var(--muted);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 35px;
+}
+
+
+/* =========================================
+   READ SECTION
+========================================= */
+
+.read-section {
+
+    width: min(var(--max-width), 90%);
+
+    margin: auto;
+
+    padding: 110px 0;
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    gap: 40px;
+
+    margin-bottom: 45px;
+}
+
+
+.section-heading h2 {
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(38px, 5vw, 55px);
+
+    line-height: 1.1;
+}
+
+
+.section-heading > p {
+
+    max-width: 430px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   EXPERIENCE GRID
+========================================= */
+
+.experience-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+
+    /*
+        No fixed height.
+
+        The grid automatically grows as
+        JavaScript adds more cards.
+    */
+}
+
+
+/* =========================================
+   NO EXPERIENCES MESSAGE
+========================================= */
+
+.no-experiences {
+
+    grid-column: 1 / -1;
+
+    min-height: 250px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    border: 1px dashed var(--border);
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.015);
+}
+
+
+.no-experiences h3 {
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+
+    color: var(--text);
+}
+
+
+.no-experiences p {
+
+    margin-top: 8px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   EXPERIENCE CARD
+========================================= */
+
+.experience-card {
+
+    min-height: 350px;
+
+    padding: 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        145deg,
+        #222629,
+        #1a1d20
+    );
+
+    transition:
+        transform 0.2s,
+        border-color 0.2s,
+        background 0.2s;
+}
+
+
+.experience-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color: #555a5d;
+
+    background: var(--card-hover);
+}
+
+
+/* College + year */
+
+.card-meta {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    color: #969a99;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+/* Title */
+
+.experience-card h3 {
+
+    margin-top: 32px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+
+    line-height: 1.25;
+}
+
+
+/* Student */
+
+.student-line {
+
+    margin-top: 9px;
+
+    color: var(--accent);
+
+    font-size: 12px;
+}
+
+
+/* Experience */
+
+.experience-preview {
+
+    margin-top: 20px;
+
+    color: #b5b7b6;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    /*
+        Only the preview is limited.
+        The actual experience is still stored
+        completely in JavaScript/backend.
+    */
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 5;
+
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+
+
+/* Read link */
+
+.read-link {
+
+    margin-top: auto;
+
+    padding-top: 25px;
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.read-link:hover {
+
+    color: var(--accent);
+}
+
+
+/* =========================================
+   UPLOAD SECTION
+========================================= */
+
+.upload-section {
+
+    width: min(var(--max-width), 90%);
+
+    margin: auto;
+
+    padding: 110px 0 130px;
+}
+
+
+.experience-form {
+
+    max-width: 900px;
+
+    padding: 45px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: #1b1e21;
+}
+
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px 20px;
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.full-width {
+
+    grid-column: 1 / -1;
+}
+
+
+.form-group label {
+
+    color: #deddd8;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    border: 1px solid #3c4145;
+
+    border-radius: 6px;
+
+    outline: none;
+
+    background: #121416;
+
+    color: #f2f1ed;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+
+.form-group input,
+.form-group select {
+
+    height: 50px;
+
+    padding: 0 15px;
+}
+
+
+.form-group textarea {
+
+    min-height: 230px;
+
+    padding: 14px 15px;
+
+    resize: vertical;
+
+    line-height: 1.7;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
+    color: #717575;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: var(--accent);
+
+    box-shadow: 0 0 0 3px rgba(216, 208, 189, 0.08);
+}
+
+
+.submit-btn {
+
+    margin-top: 30px;
+
+    border: none;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    padding: 25px 5%;
+
+    border-top: 1px solid var(--border);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: #777b7b;
+
+    font-size: 11px;
+}
+
+/* =========================================
+   EXPERIENCE PREVIEW
+   ========================================= */
+
+.experience-preview {
+
+    line-height: 1.7;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 4;
+
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================
+   EXPANDED EXPERIENCE
+   ========================================= */
+
+.experience-card.expanded .experience-preview {
+
+    display: block;
+
+    -webkit-line-clamp: unset;
+
+    overflow: visible;
+
+}
+
+
+/* =========================================
+   READ FULL STORY BUTTON
+   ========================================= */
+
+.read-link {
+
+    border: none;
+
+    background: none;
+
+    padding: 0;
+
+    font: inherit;
+
+    cursor: pointer;
+
+    text-align: left;
+
+}
+
+
+/* =========================================
+   OPTIONAL HOVER
+   ========================================= */
+
+.read-link:hover {
+
+    text-decoration: underline;
+
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .experience-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .section-heading {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .hero h1 {
+
+        font-size: clamp(50px, 10vw, 75px);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+
+        height: 62px;
+
+        padding: 0 5%;
+    }
+
+
+    .logo {
+
+        font-size: 18px;
+    }
+
+
+    .navbar nav {
+
+        gap: 16px;
+    }
+
+
+    .navbar nav a {
+
+        font-size: 12px;
+    }
+
+
+    .hero {
+
+        min-height: calc(100vh - 62px);
+    }
+
+
+    .hero h1 {
+
+        font-size: clamp(45px, 14vw, 65px);
+
+        letter-spacing: -2px;
+    }
+
+
+    .hero-description {
+
+        font-size: 14px;
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+    }
+
+
+    .btn {
+
+        width: 100%;
+    }
+
+
+    .read-section,
+    .upload-section {
+
+        padding: 80px 0;
+    }
+
+
+    .experience-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .experience-card {
+
+        min-height: 320px;
+    }
+
+
+    .experience-form {
+
+        padding: 24px;
+    }
+
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .full-width {
+
+        grid-column: auto;
+    }
+
+
+    footer {
+
+        flex-direction: column;
+    }
+
+}

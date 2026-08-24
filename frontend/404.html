@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>404 - Campus Echo</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #f5f5f2;
+            color: #202020;
+            font-family: Arial, Helvetica, sans-serif;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navbar */
+
+        nav {
+            height: 65px;
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            gap: 22px;
+            padding: 0 30px;
+
+            border-bottom: 1px solid #ddddda;
+        }
+
+        nav a {
+            color: #202020;
+            text-decoration: underline;
+
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #777;
+        }
+
+
+        /* Main */
+
+        .error-container {
+            flex: 1;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+
+        .brand {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 45px;
+        }
+
+
+        .error-number {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(90px, 15vw, 170px);
+
+            font-weight: bold;
+
+            line-height: 1;
+
+            letter-spacing: -8px;
+
+            color: #202020;
+
+            margin-bottom: 20px;
+        }
+
+
+        .message {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(22px, 4vw, 34px);
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .description {
+            max-width: 450px;
+
+            color: #777;
+
+            font-size: 15px;
+
+            line-height: 1.7;
+
+            margin-bottom: 30px;
+        }
+
+
+        .home-button {
+            display: inline-block;
+
+            padding: 12px 25px;
+
+            border: 1px solid #202020;
+
+            color: #202020;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+
+        .home-button:hover {
+            background: #202020;
+            color: white;
+        }
+
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+
+            padding: 18px;
+
+            border-top: 1px solid #ddddda;
+
+            color: #888;
+
+            font-size: 11px;
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            nav {
+                height: 55px;
+
+                gap: 15px;
+
+                padding: 0 15px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .brand {
+                margin-bottom: 35px;
+
+                font-size: 14px;
+            }
+
+            .error-number {
+                letter-spacing: -5px;
+            }
+
+            .message {
+                font-size: 22px;
+            }
+
+            .description {
+                font-size: 14px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <a href="/">Home</a>
+
+        <a href="/read">Read</a>
+
+        <a href="/upload">Upload</a>
+
+    </nav>
+
+
+
+    <!-- 404 Content -->
+
+    <main class="error-container">
+
+        <div class="brand">
+            CAMPUS ECHO
+        </div>
+
+
+        <div class="error-number">
+            404
+        </div>
+
+
+        <h1 class="message">
+            EXPERIENCE NOT FOUND
+        </h1>
+
+
+        <p class="description">
+            Looks like this page isn't part of the campus story.
+            The experience you're looking for may have been removed
+            or the address may be incorrect.
+        </p>
+
+
+        <a href="/" class="home-button">
+            BACK TO CAMPUS
+        </a>
+
+    </main>
+
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        © Campus Echo. Student experiences, shared for students.
+
+    </footer>
+
+
+</body>
+
+</html>

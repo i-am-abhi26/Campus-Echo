@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Campus Echo</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <a href="#home" class="logo">
+            Campus Echo
+        </a>
+
+
+        <nav>
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#read">
+                Read
+            </a>
+
+            <a href="#upload">
+                Upload
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- ================= HOME ================= -->
+
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    STUDENT EXPERIENCES
+                </p>
+
+
+                <h1>
+                    College is more than
+                    <span>just a degree.</span>
+                </h1>
+
+
+                <p class="hero-description">
+                    Read real experiences from students and
+                    share your own journey to help others know
+                    what college life is really like.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#read"
+                        class="btn primary"
+                    >
+                        Read Experiences
+                    </a>
+
+
+                    <a
+                        href="#upload"
+                        class="btn secondary"
+                    >
+                        Share Your Story
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= READ ================= -->
+
+        <section id="read" class="read-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        FROM OTHER STUDENTS
+                    </p>
+
+
+                    <h2>
+                        College Experiences
+                    </h2>
+
+                </div>
+
+
+                <p>
+                    Discover honest experiences from students
+                    who have already lived through it.
+                </p>
+
+            </div>
+
+
+
+            <!-- EXPERIENCE CARDS -->
+
+            <div class="experience-grid">
+
+                <div class="no-experiences">
+
+                    <h3>
+                        No experiences shared yet.
+                    </h3>
+
+
+                    <p>
+                        Be the first student to share
+                        your college experience.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= UPLOAD ================= -->
+
+        <section id="upload" class="upload-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        YOUR STORY
+                    </p>
+
+
+                    <h2>
+                        Share your experience
+                    </h2>
+
+                </div>
+
+
+                <p>
+                    Tell future students what you wish
+                    you knew before joining your college.
+                </p>
+
+            </div>
+
+
+
+            <form
+                class="experience-form"
+                id="experienceForm"
+            >
+
+                <div class="form-grid">
+
+
+                    <!-- STUDENT NAME -->
+
+                    <div class="form-group">
+
+                        <label for="studentName">
+                            Student Name
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="studentName"
+                            name="studentName"
+                            placeholder="Enter your name"
+                            maxlength="80"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- COLLEGE -->
+
+                    <div class="form-group">
+
+                        <label for="college">
+                            College
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="college"
+                            name="college"
+                            placeholder="Enter your college"
+                            maxlength="150"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- COURSE -->
+
+                    <div class="form-group">
+
+                        <label for="course">
+                            Course / Branch
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="course"
+                            name="course"
+                            placeholder="e.g. Computer Science"
+                            maxlength="120"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- YEAR -->
+
+                    <div class="form-group">
+
+                        <label for="year">
+                            Year
+                        </label>
+
+
+                        <select
+                            id="year"
+                            name="year"
+                            required
+                        >
+
+                            <option
+                                value=""
+                                disabled
+                                selected
+                            >
+                                Select your year
+                            </option>
+
+
+                            <option value="1st Year">
+                                1st Year
+                            </option>
+
+
+                            <option value="2nd Year">
+                                2nd Year
+                            </option>
+
+
+                            <option value="3rd Year">
+                                3rd Year
+                            </option>
+
+
+                            <option value="4th Year">
+                                4th Year
+                            </option>
+
+
+                            <option value="Alumni">
+                                Alumni
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- TITLE -->
+
+                    <div class="form-group full-width">
+
+                        <label for="title">
+                            Experience Title
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="title"
+                            name="title"
+                            placeholder="Give your experience a title"
+                            maxlength="180"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- EXPERIENCE -->
+
+                    <div class="form-group full-width">
+
+                        <label for="experience">
+                            Your Experience
+                        </label>
+
+
+                        <textarea
+                            id="experience"
+                            name="experience"
+                            rows="10"
+                            maxlength="10000"
+                            placeholder="Write about your college experience..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+
+                <button
+                    type="submit"
+                    class="btn primary submit-btn"
+                >
+                    Publish Experience
+                </button>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <span>
+            Campus Echo
+        </span>
+
+
+        <span>
+            Student experiences, shared for students.
+        </span>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="/index.js"></script>
+
+
+</body>
+
+</html>

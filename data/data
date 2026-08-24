@@ -1,0 +1,26 @@
+[
+  {
+    "studentName": "Rahul Sharma",
+    "college": "NIT Kurukshetra",
+    "course": "Computer Science and Engineering",
+    "year": "3rd Year",
+    "title": "My experience with hostel life",
+    "experience": "Moving into the hostel was difficult initially, especially because I had never lived away from home before. The first few months were mostly about adjusting to the new environment, meeting people, and managing academics on my own. Eventually, hostel life became one of the most memorable parts of college."
+  },
+  {
+    "studentName": "Ananya Singh",
+    "college": "Delhi Technological University",
+    "course": "Information Technology",
+    "year": "2nd Year",
+    "title": "What I wish I knew before joining college",
+    "experience": "I came to college expecting academics to be the only challenge, but managing time turned out to be much harder. There are clubs, events, assignments, friends and personal responsibilities. My biggest advice to freshers would be to explore different things during the first year but not completely ignore academics."
+  },
+  {
+    "studentName": "Arjun Mehta",
+    "college": "IIT Delhi",
+    "course": "Electrical Engineering",
+    "year": "4th Year",
+    "title": "Four years of college in retrospect",
+    "experience": "College taught me much more than what was written in textbooks. The academic workload was demanding, but working on projects and interacting with people from different backgrounds helped me grow the most. Looking back, I wish I had participated in more activities during my first two years instead of worrying so much about getting everything perfect."
+  }
+]
