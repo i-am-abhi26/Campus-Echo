@@ -1,58 +1,81 @@
-# Campus Echo — Frontend
+# Campus Echo
 
-A responsive, pure HTML + CSS frontend for a college experience sharing platform.
+A student experience sharing platform where college students can share their real college experiences and help others understand what college life is actually like.
 
-## Tech
+## 🌐 About the Project
 
-- HTML5
-- CSS3
-- No JavaScript
-- No frontend framework
-- No authentication
+Campus Echo allows students to:
 
-## Run
+- Read experiences shared by other students
+- Share their own college experiences
+- View information such as college, course, year, and student name
+- Expand an experience to read the complete story
+- Submit experiences through a simple form
 
-Open `index.html` directly in a browser.
+The project was built to understand how a frontend communicates with a backend using HTTP requests and APIs, without relying on Express.
 
-For development, you can also use any static server.
+## ✨ Features
 
-## Pages / sections
+- 📖 Read student experiences
+- ✍️ Share your own experience
+- 🔍 Expand cards to read the full story
+- 🌐 Custom Node.js HTTP server
+- 🔄 REST-style API endpoints
+- 💾 Persistent data storage using a JSON file
+- 🛡️ Server-side HTML sanitization
+- ⚡ Asynchronous request handling
+- 📡 Event-driven functionality using Node.js EventEmitter
+- 📱 Responsive frontend
 
-The frontend is intentionally a single-page layout with three sections:
+## 🛠️ Tech Stack
 
-- `#home` — landing/home section
-- `#read` — experience cards and sample full stories
-- `#upload` — experience submission form
+### Frontend
 
-Navigation uses normal HTML anchors, so no JavaScript/router is required.
+- HTML
+- CSS
+- JavaScript
 
-## Backend API contract
+### Backend
 
-The upload form is already configured for:
+- Node.js
+- Node.js HTTP module
+- Node.js File System API
+- Node.js EventEmitter
 
-`POST /api/experiences`
+### Security
 
-Form fields:
+- `sanitize-html`
 
-- `studentName`
-- `college`
-- `course`
-- `year`
-- `title`
-- `experience`
+### Storage
 
-Example Express route:
+- JSON file
 
-```js
-app.post("/api/experiences", async (req, res) => {
-  const { studentName, college, course, year, title, experience } = req.body;
-  // save to MongoDB
-});
-```
+## 📁 Project Structure
 
-Later, the Read section can be populated by the backend. Because the frontend is deliberately JS-free, the cleanest architecture is either:
-
-1. Express server-side renders the experience cards, or
-2. Express serves generated HTML using the same CSS.
-
-If you later decide you want a React frontend, this design can be recreated as components without changing the backend API contract.
+```text
+college-experience-platform/
+│
+├── frontend/
+│   ├── index.html
+│   ├── index.js
+│   ├── style.css
+│   └── 404.html
+│
+├── handlers/
+│   └── routeHandler.js
+│
+├── utils/
+│   ├── addNewExperience.js
+│   ├── getContentType.js
+│   ├── getData.js
+│   ├── sendResponse.js
+│   ├── serveStatic.js
+│   └── experienceEvent.js
+│
+├── data/
+│   └── data.json
+│
+├── server.js
+├── package.json
+├── package-lock.json
+└── README.md
