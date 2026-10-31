@@ -5,7 +5,7 @@ import { handleGet,handlePost } from './handlers/routeHandler.js'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 const __dirname=import.meta.dirname
 
 try {
